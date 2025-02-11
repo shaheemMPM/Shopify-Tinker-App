@@ -22,3 +22,7 @@ database.sqlite
 # Ignore shopify files created during app dev
 .shopify/*
 .shopify.lock
+
+
+# Ignore individual dev app configs
+shopify.app.*.toml
