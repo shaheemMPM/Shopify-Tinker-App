@@ -26,3 +26,6 @@ database.sqlite
 
 # Ignore individual dev app configs
 shopify.app.*.toml
+
+# Directory to store files not to be affected by git
+_backups
