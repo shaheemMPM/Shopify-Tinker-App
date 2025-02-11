@@ -1,0 +1,42 @@
+<script
+  type="module"
+>
+  document.addEventListener('tinker:cart-update', (event) => {
+    const { cart, timestamp, source } = event.detail;
+    
+    // Create alert message based on settings
+    const message = {{ block.settings.alert_message | json }} || 'Cart was updated!';
+    const showTimestamp = {{ block.settings.show_timestamp }};
+    
+    let alertText = message;
+    if (showTimestamp) {
+      alertText += `\nTime: ${new Date(timestamp).toLocaleTimeString()}`;
+    }
+    
+    // Show the alert
+    alert(alertText);
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Cart Alert",
+  "target": "body",
+  "settings": [
+    {
+      "type": "text",
+      "id": "alert_message",
+      "label": "Alert Message",
+      "default": "Cart was updated!",
+      "info": "Message to show when cart changes"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_timestamp",
+      "label": "Show timestamp",
+      "default": false,
+      "info": "When enabled, shows the time of cart update in the alert"
+    }
+  ]
+}
+{% endschema %}

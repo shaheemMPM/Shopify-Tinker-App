@@ -88,12 +88,11 @@ class CartMonitor {
           // Clone the response so we can read it multiple times
           const clone = response.clone();
 
-          // Process the response if it's JSON
-          if (
-            response.headers.get("content-type")?.includes("application/json")
-          ) {
+          try {
             const cartData = await clone.json();
             self.handleCartUpdate(cartData, "fetch");
+          } catch (error) {
+            self.log("Error parsing cart response as JSON:", error);
           }
 
           return response;
