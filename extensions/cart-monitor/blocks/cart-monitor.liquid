@@ -1,0 +1,24 @@
+<script type="module">
+  import { initializeCartMonitor } from "{{ 'cart-monitor.js' | asset_url }}";
+
+  initializeCartMonitor({
+    debug: {{ block.settings.enable_debug }},
+    cartEndpoints: ['/cart/add.js', '/cart/update.js', '/cart/change.js', '/cart/clear.js']
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Cart Monitor",
+  "target": "body",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "enable_debug",
+      "label": "Enable debug logs",
+      "default": false,
+      "info": "When enabled, debug information will be logged to the browser console"
+    }
+  ]
+}
+{% endschema %}
