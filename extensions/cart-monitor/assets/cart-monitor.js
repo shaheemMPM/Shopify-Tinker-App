@@ -1,11 +1,15 @@
 class CartMonitor {
   constructor(config = {}) {
     this.debug = config.debug || false;
-    this.cartEndpoints = config.cartEndpoints || [
+    this.cartEndpoints = [
       "/cart/add.js",
+      "/cart/add",
       "/cart/update.js",
+      "/cart/update",
       "/cart/change.js",
+      "/cart/change",
       "/cart/clear.js",
+      "/cart/clear",
     ];
 
     this.initializeInterceptors();

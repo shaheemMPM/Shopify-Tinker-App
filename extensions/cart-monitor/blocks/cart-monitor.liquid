@@ -2,17 +2,7 @@
   import { initializeCartMonitor } from "{{ 'cart-monitor.js' | asset_url }}";
 
   initializeCartMonitor({
-    debug: {{ block.settings.enable_debug }},
-    cartEndpoints: [
-      '/cart/add.js',
-      '/cart/add',
-      '/cart/update.js',
-      '/cart/update',
-      '/cart/change.js',
-      '/cart/change',
-      '/cart/clear.js',
-      '/cart/clear'
-    ]
+    debug: {{ block.settings.enable_debug }}
   });
 </script>
 
