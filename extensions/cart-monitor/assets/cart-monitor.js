@@ -24,7 +24,6 @@ class CartMonitor {
   }
 
   initializeXHRInterceptor() {
-    // Store original methods
     const originalXHROpen = XMLHttpRequest.prototype.open;
     const originalXHRSend = XMLHttpRequest.prototype.send;
 
@@ -110,10 +109,8 @@ class CartMonitor {
   isCartEndpoint(url) {
     try {
       const urlObj = new URL(url, window.location.origin);
-      return this.cartEndpoints.some(
-        (endpoint) =>
-          urlObj.pathname.endsWith(endpoint) ||
-          urlObj.pathname.includes("/cart/add"),
+      return this.cartEndpoints.some((endpoint) =>
+        urlObj.pathname.endsWith(endpoint),
       );
     } catch {
       return false;
@@ -123,12 +120,11 @@ class CartMonitor {
   handleCartUpdate(cartData, source) {
     this.log(`Cart updated (via ${source}):`, cartData);
 
-    // Dispatch custom event
     const event = new CustomEvent("tinker:cart-update", {
       detail: {
         cart: cartData,
         timestamp: new Date().toISOString(),
-        source: source, // 'xhr' or 'fetch'
+        source,
       },
       bubbles: true,
     });
@@ -136,15 +132,13 @@ class CartMonitor {
   }
 }
 
-// Initialize function
 export function initializeCartMonitor(config = {}) {
   window.TinkerCartMonitor = new CartMonitor(config);
 
-  // Log initialization if debug is enabled
   if (config.debug) {
     console.log("🛒 CartMonitor: Initialized with config:", config);
 
-    // Add debug event listener
+    // Debug event listener
     document.addEventListener("tinker:cart-update", (event) => {
       console.log("🛒 CartMonitor: Cart update event:", event.detail);
     });
