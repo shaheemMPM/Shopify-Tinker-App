@@ -13,12 +13,26 @@ class CartMonitor {
     ];
 
     this.initializeInterceptors();
+    this.checkCartOnLoad();
     this.log("Cart monitor initialized");
   }
 
   log(...args) {
     if (this.debug) {
       console.log("🛒 CartMonitor:", ...args);
+    }
+  }
+
+  async checkCartOnLoad() {
+    try {
+      const response = await fetch("/cart.js");
+      const cartData = await response.json();
+
+      if (cartData?.items?.length) {
+        this.handleCartUpdate(cartData, "pageLoad");
+      }
+    } catch (error) {
+      this.log("Error fetching cart on page load:", error);
     }
   }
 
