@@ -14,7 +14,7 @@ class CartMonitor {
 
     this.initializeInterceptors();
     this.checkCartOnLoad();
-    this.log("Cart monitor initialized");
+    this.log("Cart monitor:fetch-override initialized");
   }
 
   log(...args) {
