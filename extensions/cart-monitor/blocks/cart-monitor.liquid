@@ -1,5 +1,5 @@
 <script type="module">
-  import { initializeCartMonitor } from "{{ 'cart-monitor.js' | asset_url }}";
+  import { initializeCartMonitor } from "{{ 'cart-monitor-fetch-override.js' | asset_url }}";
 
   initializeCartMonitor({
     debug: {{ block.settings.enable_debug }}
