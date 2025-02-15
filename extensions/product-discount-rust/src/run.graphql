@@ -1,10 +1,8 @@
 query Input {
-  discountNode {
-    metafield(
-      namespace: "$app:product-discount-rust"
-      key: "function-configuration"
-    ) {
-      value
+  cart {
+    lines {
+      id
+      quantity
     }
   }
 }
