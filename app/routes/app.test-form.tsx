@@ -1,11 +1,4 @@
-import {
-  BlockStack,
-  Button,
-  Card,
-  FooterHelp,
-  Layout,
-  Page,
-} from "@shopify/polaris";
+import { BlockStack, Button, FooterHelp, Layout, Page } from "@shopify/polaris";
 import { useForm } from "@tanstack/react-form";
 import { type ZodValidator, zodValidator } from "@tanstack/zod-form-adapter";
 import { FormActiveDates } from "app/common/active-dates/FormActiveDates";
@@ -19,6 +12,7 @@ import {
   PurchaseType,
   purchaseType,
 } from "app/common/purchase-type/purchase-type.validator";
+import FormDebug from "app/components/ui/FormDebug";
 
 export const multiValueValidator = z.object({
   purchaseType,
@@ -85,11 +79,7 @@ export default function TestForm() {
           </BlockStack>
         </Layout.Section>
         <Layout.Section variant="oneThird">
-          <Card>
-            <div style={{ overflow: "scroll", maxHeight: "575px" }}>
-              <pre>{JSON.stringify(form, null, 2)}</pre>
-            </div>
-          </Card>
+          <FormDebug form={form as any} />
         </Layout.Section>
       </Layout>
       <FooterHelp />
