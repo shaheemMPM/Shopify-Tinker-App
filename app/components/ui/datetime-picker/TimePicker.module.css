@@ -1,0 +1,8 @@
+.timePicker input[type="time"] {
+  width: 100%;
+  display: block;
+}
+
+.timePicker input[type="time"]::-webkit-calendar-picker-indicator {
+  display: none;
+}

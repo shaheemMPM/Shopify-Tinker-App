@@ -41,6 +41,15 @@ importers:
       '@shopify/shopify-app-session-storage-prisma':
         specifier: ^6.0.0
         version: 6.0.1(@prisma/client@6.3.1(prisma@6.3.1(typescript@5.7.3))(typescript@5.7.3))(@shopify/shopify-api@11.8.1)(@shopify/shopify-app-session-storage@3.0.12(@shopify/shopify-api@11.8.1))(prisma@6.3.1(typescript@5.7.3))
+      '@tanstack/react-form':
+        specifier: 0.34.1
+        version: 0.34.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.7.3)
+      '@tanstack/zod-form-adapter':
+        specifier: 0.33.0
+        version: 0.33.0(zod@3.23.8)
+      dayjs:
+        specifier: 1.11.13
+        version: 1.11.13
       isbot:
         specifier: ^5.1.0
         version: 5.1.22
@@ -56,6 +65,9 @@ importers:
       vite-tsconfig-paths:
         specifier: ^5.0.1
         version: 5.1.4(typescript@5.7.3)(vite@5.4.14(@types/node@22.13.1))
+      zod:
+        specifier: 3.23.8
+        version: 3.23.8
     devDependencies:
       '@remix-run/eslint-config':
         specifier: ^2.15.0
@@ -1665,6 +1677,7 @@ packages:
   '@shopify/network@3.3.0':
     resolution: {integrity: sha512-Lln7vglzLK9KiYhl9ucQFVM7ArlpUM21xkDriBX8kVrqsoBsi+4vFIjf1wjhNPT0J/zHMjky7jiTnxVfdm+xXw==}
     engines: {node: '>=18.12.0'}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
 
   '@shopify/polaris-icons@8.11.1':
     resolution: {integrity: sha512-2HLzvJWMejKIwS5P2bs7k5CAjBKwPnD/iy9ncPzcgqRjmFInBXLtUXFQhPWDw6JwXzb1ZjNQK/ssTctcfz87Sw==}
@@ -1720,6 +1733,35 @@ packages:
 
   '@shopify/storefront-api-client@1.0.4':
     resolution: {integrity: sha512-G/brdAHI+EumUosf6s0cKlsc7PJ/+echDzbviqTjmH6stfqA6BtLF1AwnULuDR1AZjS4vnZLEaEbeVrqlAb2Zg==}
+
+  '@tanstack/form-core@0.33.0':
+    resolution: {integrity: sha512-ouu1JVwLZgfPkIdIq3TWIZs++KpLOo8Bx4tXYOc/1KwA9qUQ0Iv/+Y6GfiC4wMcUzGCtLKOww84eZ8Qdge3ZmQ==}
+
+  '@tanstack/form-core@0.34.1':
+    resolution: {integrity: sha512-W8xRWcvlK5oek9V/JPblUyBf/cRb06nxqJTdEf7wZ6HxPnB0V9nNwZlWxvSfkMrbSkV+/H972Evy3cVc6WBB7g==}
+
+  '@tanstack/react-form@0.34.1':
+    resolution: {integrity: sha512-dvEUOHAw3fJuNC3g4lYlKEs/xdVS8ksRj2MDEWCQe6BYajVSv2qjnOTVoiUw0TjLOMxbCo+08S6j/0sM1/je1Q==}
+    peerDependencies:
+      '@tanstack/start': ^1.43.13
+      react: ^17.0.0 || ^18.0.0 || ^19.0.0
+    peerDependenciesMeta:
+      '@tanstack/start':
+        optional: true
+
+  '@tanstack/react-store@0.5.8':
+    resolution: {integrity: sha512-G8TFpT/QJv2B2vro4QOUypvMjjSrbLRR8VKNoBByr6gpXAhU7y7mkrsn55Ra6svplVuvF+rAPTvHcUJKtU6geQ==}
+    peerDependencies:
+      react: ^17.0.0 || ^18.0.0
+      react-dom: ^17.0.0 || ^18.0.0
+
+  '@tanstack/store@0.5.5':
+    resolution: {integrity: sha512-EOSrgdDAJExbvRZEQ/Xhh9iZchXpMN+ga1Bnk8Nmygzs8TfiE6hbzThF+Pr2G19uHL6+DTDTHhJ8VQiOd7l4tA==}
+
+  '@tanstack/zod-form-adapter@0.33.0':
+    resolution: {integrity: sha512-vttDPKRb647UdOR3qUSN8bscj8wZibdYE6DR1eUbTmGdDT4OiwA1rDKOEpzmLQSsDbY1vLDAAfANQ1nApHoUFw==}
+    peerDependencies:
+      zod: ^3.x
 
   '@testing-library/dom@8.20.1':
     resolution: {integrity: sha512-/DiOQ5xBxgdYRC8LNk7U+RWat0S3qRLeIw3ZIkMQ9kkVlRmwD/Eg8k8CqIpD6GW7u20JIUOfMKbxtiLutpjQ4g==}
@@ -2435,6 +2477,9 @@ packages:
   dataloader@2.2.3:
     resolution: {integrity: sha512-y2krtASINtPFS1rSDjacrFgn1dcUuoREVabwlOGOe4SdxenREqwjwjElAdwvbGM7kgZz9a3KVicWR7vcz8rnzA==}
 
+  dayjs@1.11.13:
+    resolution: {integrity: sha512-oaMBel6gjolK862uaPQOVTA7q3TZhuSvuMQAAglQDOWYO9A91IrAOUJEyKVlqJlHE0vq5p5UXxzdPfMH/x6xNg==}
+
   debounce@1.2.1:
     resolution: {integrity: sha512-XRRe6Glud4rd/ZGQfiV1ruXSfbvfJedlV9Y6zOlP+2K04vBYiJEte6stfFkCP03aMnY5tsipamumUjL14fofug==}
 
@@ -2466,6 +2511,9 @@ packages:
   decamelize@1.2.0:
     resolution: {integrity: sha512-z2S+W9X73hAUUki+N+9Za2lBlun89zigOyGrsax+KUQ6wKW4ZoWpEYBkGhQjwAjjDCkWxhY0VKEhk8wzY7F5cA==}
     engines: {node: '>=0.10.0'}
+
+  decode-formdata@0.8.0:
+    resolution: {integrity: sha512-iUzDgnWsw5ToSkFY7VPFA5Gfph6ROoOxOB7Ybna4miUSzLZ4KaSJk6IAB2AdW6+C9vCVWhjjNA4gjT6wF3eZHQ==}
 
   decode-named-character-reference@1.0.2:
     resolution: {integrity: sha512-O8x12RzrUF8xyVcY0KJowWsmaJxQbmy0/EtnNtHRpsOcT7dFk5W598coHqBVpmWo1oQQfsCqfCmkZN5DJrZVdg==}
@@ -5165,6 +5213,11 @@ packages:
   urlpattern-polyfill@8.0.2:
     resolution: {integrity: sha512-Qp95D4TPJl1kC9SKigDcqgyM2VDVO4RiJc2d4qe5GrYm+zbIQCWWKAFaJNQ4BhdFeDGwBmAxqJBwWSJDb9T3BQ==}
 
+  use-sync-external-store@1.4.0:
+    resolution: {integrity: sha512-9WXSPC5fMv61vaupRkCKCxsPxBocVnwakBEkMIHHpkTTg6icbJtg6jzgtLDm4bl3cSHAca52rYWih0k4K3PfHw==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
+
   util-deprecate@1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
 
@@ -5480,6 +5533,9 @@ packages:
   yocto-queue@1.1.1:
     resolution: {integrity: sha512-b4JR1PFR10y1mKjhHY9LaGo6tmrgjit7hxVIeAmyMw3jegXR4dhYqLaQF5zMXZxY7tLpMyJeLjr1C4rLmkVe8g==}
     engines: {node: '>=12.20'}
+
+  zod@3.23.8:
+    resolution: {integrity: sha512-XBx9AXhXktjUqnepgTiE5flcKIYWi/rme0Eaj+5Y0lftuGBq+jyRu/md4WnuxqgP1ubdpNCsYEYPxrzVHD8d6g==}
 
   zwitch@2.0.4:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
@@ -7538,6 +7594,39 @@ snapshots:
     dependencies:
       '@shopify/graphql-client': 1.2.2
 
+  '@tanstack/form-core@0.33.0':
+    dependencies:
+      '@tanstack/store': 0.5.5
+
+  '@tanstack/form-core@0.34.1':
+    dependencies:
+      '@tanstack/store': 0.5.5
+
+  '@tanstack/react-form@0.34.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.7.3)':
+    dependencies:
+      '@remix-run/node': 2.15.3(typescript@5.7.3)
+      '@tanstack/form-core': 0.34.1
+      '@tanstack/react-store': 0.5.8(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      decode-formdata: 0.8.0
+      react: 18.3.1
+    transitivePeerDependencies:
+      - react-dom
+      - typescript
+
+  '@tanstack/react-store@0.5.8(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      '@tanstack/store': 0.5.5
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+      use-sync-external-store: 1.4.0(react@18.3.1)
+
+  '@tanstack/store@0.5.5': {}
+
+  '@tanstack/zod-form-adapter@0.33.0(zod@3.23.8)':
+    dependencies:
+      '@tanstack/form-core': 0.33.0
+      zod: 3.23.8
+
   '@testing-library/dom@8.20.1':
     dependencies:
       '@babel/code-frame': 7.26.2
@@ -7754,7 +7843,7 @@ snapshots:
       '@babel/plugin-syntax-typescript': 7.25.9(@babel/core@7.26.8)
       '@vanilla-extract/babel-plugin-debug-ids': 1.2.0
       '@vanilla-extract/css': 1.17.1
-      esbuild: 0.17.6
+      esbuild: 0.18.20
       eval: 0.1.8
       find-up: 5.0.0
       javascript-stringify: 2.1.0
@@ -8431,6 +8520,8 @@ snapshots:
 
   dataloader@2.2.3: {}
 
+  dayjs@1.11.13: {}
+
   debounce@1.2.1: {}
 
   debug@2.6.9:
@@ -8446,6 +8537,8 @@ snapshots:
       ms: 2.1.3
 
   decamelize@1.2.0: {}
+
+  decode-formdata@0.8.0: {}
 
   decode-named-character-reference@1.0.2:
     dependencies:
@@ -11750,6 +11843,10 @@ snapshots:
 
   urlpattern-polyfill@8.0.2: {}
 
+  use-sync-external-store@1.4.0(react@18.3.1):
+    dependencies:
+      react: 18.3.1
+
   util-deprecate@1.0.2: {}
 
   util@0.12.5:
@@ -12062,5 +12159,7 @@ snapshots:
   yocto-queue@0.1.0: {}
 
   yocto-queue@1.1.1: {}
+
+  zod@3.23.8: {}
 
   zwitch@2.0.4: {}
