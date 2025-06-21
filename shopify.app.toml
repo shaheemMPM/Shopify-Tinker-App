@@ -3,26 +3,31 @@
 client_id = "9a96a5aa4bed16279b5da65776d97139"
 name = "shaheem-tinker-dev"
 handle = "shaheem-tinker-dev"
-application_url = "https://example.com/"
+application_url = "https://bs-wonder-simplified-norway.trycloudflare.com"
 embedded = true
 
-[access_scopes]
-# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
-scopes = "write_products"
-
-[auth]
-redirect_urls = [ "https://example.com/api/auth" ]
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "shaheem-tinker.myshopify.com"
+include_config_on_deploy = true
 
 [webhooks]
 api_version = "2025-01"
 
-  [[webhooks.subscriptions]]
-  topics = [ "app/uninstalled" ]
-  uri = "/webhooks/app/uninstalled"
+[[webhooks.subscriptions]]
+topics = ["app/scopes_update"]
+uri = "/webhooks/app/scopes_update"
 
-  [[webhooks.subscriptions]]
-  topics = [ "app/scopes_update" ]
-  uri = "/webhooks/app/scopes_update"
+[[webhooks.subscriptions]]
+topics = ["app/uninstalled"]
+uri = "/webhooks/app/uninstalled"
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_discounts,write_products,read_publications,read_locations"
+
+[auth]
+redirect_urls = ["https://bs-wonder-simplified-norway.trycloudflare.com/auth/callback", "https://bs-wonder-simplified-norway.trycloudflare.com/auth/shopify/callback", "https://bs-wonder-simplified-norway.trycloudflare.com/api/auth/callback"]
 
 [pos]
 embedded = false

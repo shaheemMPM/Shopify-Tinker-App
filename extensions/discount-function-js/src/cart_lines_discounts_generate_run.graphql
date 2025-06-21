@@ -1,0 +1,18 @@
+query CartInput {
+  cart {
+    lines {
+      id
+      cost {
+        subtotalAmount {
+          amount
+        }
+      }
+    }
+    retailLocation {
+      id
+    }
+  }
+  discount {
+    discountClasses
+  }
+}
